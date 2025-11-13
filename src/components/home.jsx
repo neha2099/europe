@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./home.css";
 import logo from "../assets/logo.png";
-import Img from "../assets/sane.jpeg"; // Hero image
+import Img from "../assets/snowman.png"; // Hero image
 import Img1 from "../assets/prague.jpg";
 import Img2 from "../assets/vienna.jpg";
 import Img3 from "../assets/croatia.avif";
