@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter basename="/europe_trip">
+  <BrowserRouter basename="/europe">
     <App />
   </BrowserRouter>
 );
