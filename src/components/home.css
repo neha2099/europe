@@ -1,4 +1,4 @@
-/* home.css */
+/* home.css - Fully Responsive Version */
 
 /* Global Styles */
 body, html {
@@ -25,7 +25,6 @@ body, html {
   background-color: #b71c1c; /* Christmas red */
   color: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-
 }
 
 .navbar .logo img {
@@ -70,7 +69,7 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,50,0.5); /* soft overlay */
+  background: rgba(0,0,50,0.5);
   z-index: 1;
 }
 
@@ -133,7 +132,7 @@ body, html {
 .categories-section {
   padding: 3rem 2rem;
   text-align: center;
-  background-color: #fff3e0; /* Light orange festive */
+  background-color: #fff3e0;
 }
 
 .categories-section h2 {
@@ -179,10 +178,10 @@ body, html {
   color: #d32f2f;
 }
 
-/* Funny Conversation Section - Updated Bubble Effect */
+/* Funny Conversation Section */
 .funny-characters-section {
   padding: 3rem 2rem;
-  background-color: #fff3e0; /* Light orange festive */
+  background-color: #fff3e0;
   text-align: center;
   border-radius: 20px;
   margin: 2rem;
@@ -201,7 +200,7 @@ body, html {
   gap: 2rem;
 }
 
-/* Base Bubble Styles */
+/* Chat bubbles */
 .chat-bubble {
   position: relative;
   display: flex;
@@ -213,15 +212,15 @@ body, html {
   font-size: 1rem;
   line-height: 1.4;
   transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  animation: bubblePop 4s infinite;
 }
 
-/* Bubble hover pop effect */
-.chat-bubble:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+@keyframes bubblePop {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
 }
 
-/* Chat avatars */
 .chat-bubble img.chat-avatar {
   width: 50px;
   height: 50px;
@@ -230,9 +229,9 @@ body, html {
   flex-shrink: 0;
 }
 
-/* Husband Bubble - blue with tail */
+/* Husband Bubble */
 .husband {
-  background-color: #e3f2fd; /* soft blue */
+  background-color: #e3f2fd;
   color: #0d47a1;
   align-self: flex-start;
 }
@@ -240,16 +239,16 @@ body, html {
 .husband::after {
   content: "";
   position: absolute;
-  left: -15px; /* tail on the left */
+  left: -15px;
   top: 20px;
   border-width: 10px;
   border-style: solid;
   border-color: transparent #e3f2fd transparent transparent;
 }
 
-/* Wife Bubble - pink with tail */
+/* Wife Bubble */
 .wife {
-  background-color: #fce4ec; /* soft pink */
+  background-color: #fce4ec;
   color: #880e4f;
   align-self: flex-end;
 }
@@ -257,23 +256,14 @@ body, html {
 .wife::after {
   content: "";
   position: absolute;
-  right: -15px; /* tail on the right */
+  right: -15px;
   top: 20px;
   border-width: 10px;
   border-style: solid;
   border-color: transparent transparent transparent #fce4ec;
 }
 
-/* Optional: Add subtle bounce animation to bubbles */
-@keyframes bubblePop {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.03); }
-}
-
-.chat-bubble {
-  animation: bubblePop 4s infinite;
-}
-/* Modal Background */
+/* Modal */
 .modal {
   display: flex;
   position: fixed;
@@ -282,38 +272,36 @@ body, html {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6); /* Slightly transparent dark overlay */
+  background-color: rgba(0,0,0,0.6);
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.3s ease-in-out;
   cursor: pointer;
 }
 
-/* Modal Image styled as Christmas postcard */
 .modal-content {
   max-width: 80%;
   max-height: 80%;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(255, 105, 180, 0.8), 0 10px 40px rgba(0,0,0,0.3);
-  border: 5px solid #ffb6c1; /* Pink border like a postcard */
-  background: #ffe4e1; /* Soft pink background */
+  border: 5px solid #ffb6c1;
+  background: #ffe4e1;
   padding: 10px;
   animation: zoomIn 0.4s ease-in-out;
+  position: relative;
 }
 
-/* Close Button */
 .close {
   position: absolute;
   top: 20px;
   right: 40px;
-  color: #ff69b4; /* Hot pink */
+  color: #ff69b4;
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
   text-shadow: 0 0 5px #fff;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -324,16 +312,6 @@ body, html {
   to { transform: scale(1); opacity: 1; }
 }
 
-/* Pointer for chat bubbles */
-.chat-bubble {
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.chat-bubble:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.5);
-}
 .modal-content::after {
   content: "";
   position: absolute;
@@ -352,7 +330,6 @@ body, html {
   50% { transform: scale(1.1); opacity: 1; }
 }
 
-
 /* Footer */
 .footer {
   background-color: #b71c1c;
@@ -368,7 +345,7 @@ body, html {
 
 .footer-section h3, .footer-section h4 {
   margin-bottom: 1rem;
-  color: #ffeb3b; /* Golden accent */
+  color: #ffeb3b;
 }
 
 .footer-section p {
@@ -391,23 +368,7 @@ body, html {
   color: #ffe082;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .hero-section {
-    flex-direction: column;
-  }
-
-  .categories-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .conversation {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-/* Snow Animation */
+/* Snowflakes */
 @keyframes fall {
   0% { transform: translateY(-10px) rotate(0deg); opacity: 0.8; }
   50% { opacity: 1; }
@@ -427,7 +388,8 @@ body, html {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-/* Twinkling lights */
+
+/* Twinkling Lights */
 .christmas-theme {
   background: radial-gradient(circle at top, #fff8f0 0%, #fce4ec 50%, #fff8f0 100%);
   position: relative;
@@ -448,3 +410,101 @@ body, html {
   from { opacity: 0.2; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1.2); }
 }
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .categories-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .conversation {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar .options {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar .options a {
+    margin: 0.3rem;
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .navbar .logo img {
+    width: 50px;
+  }
+
+  /* Hero */
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .hero-image img {
+    max-width: 90%;
+  }
+
+  /* Categories */
+  .category-card {
+    width: 80%;
+  }
+
+  .category-card img {
+    height: 200px;
+  }
+
+  /* Chat bubbles */
+  .chat-bubble {
+    max-width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .chat-bubble img.chat-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+
+  /* Snow & Lights Performance */
+  .snowflake:nth-child(n+20),
+  .light:nth-child(n+15) {
+    display: none;
+  }
+}
+
