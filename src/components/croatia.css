@@ -1,0 +1,241 @@
+/* ---------- PAGE BASE ---------- */
+.croatia-page {
+  padding: 2rem;
+  background: linear-gradient(135deg, #fff5f7, #fffaf0);
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Snowflake background overlay */
+.croatia-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* ---------- HEADINGS ---------- */
+.croatia-page h2 {
+  font-size: 2.8rem;
+  color: #d63384;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 0 #fff, 4px 4px 10px rgba(255, 105, 180, 0.3);
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- TABLE BASE ---------- */
+.croatia-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Remove harsh black borders */
+.croatia-table,
+.croatia-table th,
+.croatia-table td {
+  border: none !important;
+}
+
+/* ---------- TABLE HEADER ---------- */
+.croatia-table th {
+  background-color: #ffe9ec;
+  color: #b71c1c;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+  text-shadow: 1px 1px 0 #fff;
+  box-shadow: 0 3px 6px rgba(255, 182, 193, 0.2);
+}
+
+/* ---------- TABLE CELLS ---------- */
+.croatia-table td {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 3px 10px rgba(255, 182, 193, 0.25);
+  vertical-align: middle;
+  font-size: 0.95rem;
+}
+
+.table-row {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.table-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.3);
+}
+
+/* ---------- IMAGES ---------- */
+.table-img {
+  width: 100px;
+  height: 80px;
+  border-radius: 10px;
+  border: #d63384;
+  box-shadow: 0 3px 10px rgba(255, 182, 193, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.table-img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- LINKS ---------- */
+a {
+  color: #c2185b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #d63384;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+  background: linear-gradient(90deg, #ffccd5, #ffd6e0);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  color: #b71c1c;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(255, 182, 193, 0.3);
+  font-family: inherit;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ffd6e0, #fff0f3);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4);
+}
+
+/* ---------- PHOTO UPLOAD SECTION ---------- */
+.uploaded-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* ---------- MODAL ---------- */
+.details-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.details-content {
+  background: linear-gradient(135deg, #fffaf0, #fff0f3);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+  text-align: center;
+  position: relative;
+}
+
+.details-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(255, 182, 193, 0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #b71c1c;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.details-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #c2185b;
+  font-weight: 600;
+}
+
+/* ---------- TRIP GUIDE BUTTON ---------- */
+.center-container {
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+  z-index: 2; /* Make sure it's above any overlays */
+}
+
+.trip-guide-btn {
+  padding: 0.8rem 2rem;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.trip-guide-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.6);
+}
+
+
+/* ---------- TRANSPORT BADGES ---------- */
+.transport-badge {
+  display: inline-block;
+  background-color: #ffeff2;
+  color: #b71c1c;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(255, 182, 193, 0.3);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .croatia-table {
+    font-size: 0.85rem;
+  }
+
+  .table-img {
+    width: 90px;
+  }
+
+  .croatia-page h2 {
+    font-size: 2rem;
+  }
+
+  button, .trip-guide-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}

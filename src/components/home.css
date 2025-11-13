@@ -1,0 +1,450 @@
+/* home.css */
+
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff8f0; /* Light warm background */
+  color: #333;
+}
+
+/* Container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #b71c1c; /* Christmas red */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+}
+
+.navbar .logo img {
+  width: 60px;
+  border-radius: 100%;
+  height: auto;
+}
+
+.navbar h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  flex: 1;
+}
+
+.navbar .options a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar .options a:hover {
+  color: #ffeb3b; /* Golden hover */
+}
+
+/* Hero Section */
+.christmas-hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: url('../assets/christmas-lights.gif') center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,50,0.5); /* soft overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.hero-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #ff1a1a;
+  transform: scale(1.05);
+}
+
+.hero-image img {
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-15px);}
+}
+
+/* Categories Section */
+.categories-section {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #fff3e0; /* Light orange festive */
+}
+
+.categories-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #b71c1c;
+}
+
+.categories-grid {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.category-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.category-card span {
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+/* Funny Conversation Section - Updated Bubble Effect */
+.funny-characters-section {
+  padding: 3rem 2rem;
+  background-color: #fff3e0; /* Light orange festive */
+  text-align: center;
+  border-radius: 20px;
+  margin: 2rem;
+}
+
+.conversation-heading {
+  font-size: 2rem;
+  color: #b71c1c;
+  margin-bottom: 2rem;
+}
+
+.conversation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Base Bubble Styles */
+.chat-bubble {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Bubble hover pop effect */
+.chat-bubble:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* Chat avatars */
+.chat-bubble img.chat-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+/* Husband Bubble - blue with tail */
+.husband {
+  background-color: #e3f2fd; /* soft blue */
+  color: #0d47a1;
+  align-self: flex-start;
+}
+
+.husband::after {
+  content: "";
+  position: absolute;
+  left: -15px; /* tail on the left */
+  top: 20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #e3f2fd transparent transparent;
+}
+
+/* Wife Bubble - pink with tail */
+.wife {
+  background-color: #fce4ec; /* soft pink */
+  color: #880e4f;
+  align-self: flex-end;
+}
+
+.wife::after {
+  content: "";
+  position: absolute;
+  right: -15px; /* tail on the right */
+  top: 20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fce4ec;
+}
+
+/* Optional: Add subtle bounce animation to bubbles */
+@keyframes bubblePop {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.chat-bubble {
+  animation: bubblePop 4s infinite;
+}
+/* Modal Background */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* Slightly transparent dark overlay */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Modal Image styled as Christmas postcard */
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.8), 0 10px 40px rgba(0,0,0,0.3);
+  border: 5px solid #ffb6c1; /* Pink border like a postcard */
+  background: #ffe4e1; /* Soft pink background */
+  padding: 10px;
+  animation: zoomIn 0.4s ease-in-out;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #ff69b4; /* Hot pink */
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 0 0 5px #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Pointer for chat bubbles */
+.chat-bubble {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.5);
+}
+.modal-content::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 25px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+  pointer-events: none;
+  animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+
+/* Footer */
+.footer {
+  background-color: #b71c1c;
+  color: #fff;
+  padding: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section h3, .footer-section h4 {
+  margin-bottom: 1rem;
+  color: #ffeb3b; /* Golden accent */
+}
+
+.footer-section p {
+  margin: 0.3rem 0;
+}
+
+.social-icons a {
+  margin-right: 1rem;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #ffe082;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .categories-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .conversation {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Snow Animation */
+@keyframes fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0.5; }
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  z-index: 9999;
+  color: white;
+  font-size: 1rem;
+  user-select: none;
+  pointer-events: none;
+  animation-name: fall;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+/* Twinkling lights */
+.christmas-theme {
+  background: radial-gradient(circle at top, #fff8f0 0%, #fce4ec 50%, #fff8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.light {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 3px yellow;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.2; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.2); }
+}
