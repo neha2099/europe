@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/europe/static/css/main.bd4a5bef.css",
-    "main.js": "/europe/static/js/main.9a797184.js",
+    "main.css": "/europe/static/css/main.016c94e7.css",
+    "main.js": "/europe/static/js/main.2a5516b1.js",
     "static/media/New Project (1).gif": "/europe/static/media/New Project (1).04d81c2fcecb54aad276.gif",
     "static/media/New Project.gif": "/europe/static/media/New Project.98a7b741cb8fb740215d.gif",
-    "static/media/sane.jpeg": "/europe/static/media/sane.f822d95c80f7541a9862.jpeg",
     "static/media/girl.jpeg": "/europe/static/media/girl.b6c0a8e5462d62fc988e.jpeg",
     "static/media/BImg.png": "/europe/static/media/BImg.9ae2f359cae48a8223b0.png",
     "static/media/boy.jpeg": "/europe/static/media/boy.636fb933e3079d3d815c.jpeg",
@@ -12,6 +11,7 @@
     "static/media/prague.jpg": "/europe/static/media/prague.61abf877b2304c807ddb.jpg",
     "static/media/vienna.jpg": "/europe/static/media/vienna.bb1b4c2679d57f59a42d.jpg",
     "static/media/croatia.avif": "/europe/static/media/croatia.46c86a51b6a48d1562a4.avif",
+    "static/media/snowman.png": "/europe/static/media/snowman.8e867300905ea039fbd6.png",
     "static/media/logo.png": "/europe/static/media/logo.a91dff29f0b0bcc3526d.png",
     "static/media/Vimg3.webp": "/europe/static/media/Vimg3.60c0d76363fa99f96449.webp",
     "static/media/VImg1.webp": "/europe/static/media/VImg1.d9ea2e0433f6c764a8a3.webp",
@@ -24,11 +24,11 @@
     "static/media/BImg2.jpg": "/europe/static/media/BImg2.a89dfd9c75f01253fe46.jpg",
     "static/media/BImg3.jpg": "/europe/static/media/BImg3.0bc5ac45d7a61e9507ce.jpg",
     "index.html": "/europe/index.html",
-    "main.bd4a5bef.css.map": "/europe/static/css/main.bd4a5bef.css.map",
-    "main.9a797184.js.map": "/europe/static/js/main.9a797184.js.map"
+    "main.016c94e7.css.map": "/europe/static/css/main.016c94e7.css.map",
+    "main.2a5516b1.js.map": "/europe/static/js/main.2a5516b1.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd4a5bef.css",
-    "static/js/main.9a797184.js"
+    "static/css/main.016c94e7.css",
+    "static/js/main.2a5516b1.js"
   ]
 }
