@@ -103,7 +103,7 @@ const lights = Array.from({ length: 20 }, (_, i) => (
           </Link>
           <Link to="/Croatia" className="category-card christmas-card">
             <img src={Img3} alt="Croatia" />
-            <span>Croatia 🎁</span>
+            <span>Budapest 🎁</span>
           </Link>
         </div>
       </section>
