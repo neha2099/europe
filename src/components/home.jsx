@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./home.css";
 import logo from "../assets/logo.png";
-import Img from "../assets/sane.jpeg"; // Hero image
+import Img from "../assets/snowman.png"; // Hero image
 import Img1 from "../assets/prague.jpg";
 import Img2 from "../assets/vienna.jpg";
 import Img3 from "../assets/croatia.avif";
@@ -64,12 +64,12 @@ const lights = Array.from({ length: 20 }, (_, i) => (
           <img src={logo} alt="Europe Logo" />
         </div>
         <h1>🎅 Jingle Bells Trip to Europe 🎄</h1>
-        <div className="options">
+        {/* <div className="options">
           <a href="#">home</a>
           <a href="#">travel</a>
           <a href="#">about</a>
           <a href="#">contact</a>
-        </div>
+        </div> */}
       </nav>
 
       {/* Hero Section */}
@@ -80,7 +80,7 @@ const lights = Array.from({ length: 20 }, (_, i) => (
     <div className="hero-text">
       <h1>Europe ❄️</h1>
       <p>“🎄 Europe at Christmas is magical! Embrace all cultures and festive lights.”</p>
-      <button className="hero-btn">Explore Now</button>
+      {/* <button className="hero-btn">Explore Now</button> */}
     </div>
     <div className="hero-image">
       <img src={Img} alt="Trip" />
@@ -103,7 +103,7 @@ const lights = Array.from({ length: 20 }, (_, i) => (
           </Link>
           <Link to="/Croatia" className="category-card christmas-card">
             <img src={Img3} alt="Croatia" />
-            <span>Croatia 🎁</span>
+            <span>Budapest 🎁</span>
           </Link>
         </div>
       </section>

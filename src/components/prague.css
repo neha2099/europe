@@ -21,18 +21,8 @@
 }
 
 /* ---------- HEADINGS ---------- */
+.prague-page h2,
 .prague-page h3 {
-  font-size: 2.8rem;
-  color: #d63384;
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 0 #fff, 4px 4px 10px rgba(255, 105, 180, 0.3);
-  font-family: "Great Vibes", cursive;
-  letter-spacing: 2px;
-  position: relative;
-  z-index: 2;
-}
-
-.prague-page h2 {
   font-size: 2.8rem;
   color: #d63384;
   margin-bottom: 2rem;
@@ -54,11 +44,10 @@
   z-index: 2;
 }
 
-/* Remove harsh black borders */
 .prague-table,
 .prague-table th,
 .prague-table td {
-  border: palevioletred;
+  border: none;
 }
 
 /* ---------- TABLE HEADER ---------- */
@@ -198,7 +187,7 @@ button:hover {
   text-align: center;
   margin: 2rem 0;
   position: relative;
-  z-index: 2; /* Make sure it's above any overlays */
+  z-index: 2;
 }
 
 .trip-guide-btn {
@@ -218,7 +207,6 @@ button:hover {
   box-shadow: 0 6px 15px rgba(255, 105, 180, 0.6);
 }
 
-
 /* ---------- TRANSPORT BADGES ---------- */
 .transport-badge {
   display: inline-block;
@@ -231,22 +219,65 @@ button:hover {
   box-shadow: 0 2px 6px rgba(255, 182, 193, 0.3);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* ---------- RESPONSIVE (FULL MOBILE) ---------- */
 @media (max-width: 768px) {
+
+  .prague-page {
+    padding: 1rem;
+  }
+
+  .prague-page h2,
+  .prague-page h3 {
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+  }
+
+  /* Table becomes scrollable */
   .prague-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
     font-size: 0.85rem;
   }
 
+  .prague-table td,
+  .prague-table th {
+    padding: 0.7rem;
+  }
+
+  /* Images shrink */
   .table-img {
-    width: 90px;
+    width: 70px;
+    height: 60px;
   }
 
-  .prague-page h2 {
-    font-size: 2rem;
-  }
-
-  button, .trip-guide-btn {
+  /* Buttons shrink */
+  button,
+  .trip-guide-btn {
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  /* Modal spacing */
+  .details-content {
+    padding: 1.2rem;
+  }
+}
+
+/* Extra responsive for very small screens */
+@media (max-width: 480px) {
+
+  .prague-page h2,
+  .prague-page h3 {
+    font-size: 1.6rem;
+  }
+
+  .table-img {
+    width: 60px;
+    height: 50px;
+  }
+
+  .prague-table {
+    font-size: 0.78rem;
   }
 }
