@@ -1,15 +1,5 @@
-/* ---------- PAGE BASE ---------- */
-.prague-page {
-  padding: 2rem;
-  background: linear-gradient(135deg, #fff5f7, #fffaf0);
-  font-family: "Poppins", sans-serif;
-  color: #333;
-  text-align: center;
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
 
+<<<<<<< HEAD
 /* Snowflake background overlay */
 .prague-page::before {
   content: "";
@@ -281,3 +271,5 @@ button:hover {
     font-size: 0.78rem;
   }
 }
+=======
+>>>>>>> ab5df206a1148670063828d1bfff4ae73a6fa5cc
